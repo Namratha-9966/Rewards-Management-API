@@ -1,0 +1,84 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Customer-Rewards copy",
+		"_postman_id": "692660e4-8215-50b9-b7ef-947f02a6b027",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Customers",
+			"request": {
+				"url": "http://localhost:8080/customers",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Customer",
+			"request": {
+				"url": "http://localhost:8080/customers",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Srinivas\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Customer By Id",
+			"request": {
+				"url": "http://localhost:8080/customers/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate Rewards",
+			"request": {
+				"url": "http://localhost:8080/rewards/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Save Purchase",
+			"request": {
+				"url": "http://localhost:8080/purchases",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"customerId\": 1,\n\t\"amount\": 150\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
